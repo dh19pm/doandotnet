@@ -24,7 +24,6 @@ namespace QLLK.DAL
         }
         public void Update(string[] value)
         {
-            //dsadas
             connect.Query("UPDATE BILL SET AMOUNT = ?, PRICE = ?, CREATE_DATE = ? WHERE ID = ?").Value(value);
         }
     }
