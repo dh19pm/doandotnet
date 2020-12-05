@@ -1,0 +1,10 @@
+D:\Github\doandotnet\QLLK\bin\Debug\QLLK.exe.config
+D:\Github\doandotnet\QLLK\bin\Debug\QLLK.exe
+D:\Github\doandotnet\QLLK\bin\Debug\QLLK.pdb
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.csprojAssemblyReference.cache
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.frmDangNhap.resources
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.Properties.Resources.resources
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.csproj.GenerateResource.cache
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.csproj.CoreCompileInputs.cache
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.exe
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.pdb
