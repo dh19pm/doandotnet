@@ -174,7 +174,7 @@ namespace QLLK.GUI
                 {
                     row.Cells["colAmountBuy"].Value = 0;
                 }
-                //MessageBox.Show("Đã lưu thay đổi", "Thông báo");
+                MessageBox.Show("Đã lưu thay đổi", "Thông báo");
             }
         }
         private bool isInt(string txt)
