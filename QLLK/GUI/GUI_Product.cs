@@ -153,6 +153,8 @@ namespace QLLK.GUI
                 }
             }
             string[] temp = this.bill.ToArray();
+            GUI_CreateBill form = new GUI_CreateBill(temp);
+            form.ShowDialog();
             string save = "";
             for (int i = 0; i < temp.Length; i++)
                 save += temp[i] + "\n";
