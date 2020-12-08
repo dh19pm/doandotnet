@@ -22,11 +22,9 @@ namespace QLLK.GUI
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             string[] word;
-            string html = "";
             foreach (string str in this.bill)
             {
                 word = str.Split('|');
-                html += "id: " + word[0] + " & amount: " + word[1] + "\n";
             }
         }
     }
