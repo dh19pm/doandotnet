@@ -56,22 +56,45 @@ namespace QLLK.DAL
             cmd.ExecuteNonQuery();
             cmd.Dispose();
         }
-        public DataTable Fetch()
+        public int GetID()
+        {
+            return Convert.ToInt32(cmd.ExecuteScalar());
+        }
+        public DataTable FetchAll()
         {
             DataTable data = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(data);
             adapter.Dispose();
-            return data;
+            if (data.Rows.Count > 0)
+                return data;
+            return null;
         }
-        public void Value(string[] array)
+        public DataRow Fetch()
+        {
+            DataTable data = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(data);
+            adapter.Dispose();
+            if (data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0];
+                return row;
+            }
+            return null;
+        }
+        public int Count()
+        {
+            return Convert.ToInt32(cmd.ExecuteScalar());
+        }
+        public Connect Value(string[] array)
         {
             if (array.Length == (parameters.Length - 1))
             {
                 for (int i = 0; i < array.Length; i++)
                     cmd.Parameters.AddWithValue("@param" + (i + 1), array[i]);
-                cmd.ExecuteNonQuery();
             }
+            return this;
         }
         ~Connect()
         {

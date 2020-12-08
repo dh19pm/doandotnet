@@ -2,9 +2,13 @@ D:\Github\doandotnet\QLLK\bin\Debug\QLLK.exe.config
 D:\Github\doandotnet\QLLK\bin\Debug\QLLK.exe
 D:\Github\doandotnet\QLLK\bin\Debug\QLLK.pdb
 D:\Github\doandotnet\QLLK\obj\Debug\QLLK.csprojAssemblyReference.cache
-D:\Github\doandotnet\QLLK\obj\Debug\QLLK.frmDangNhap.resources
 D:\Github\doandotnet\QLLK\obj\Debug\QLLK.Properties.Resources.resources
 D:\Github\doandotnet\QLLK\obj\Debug\QLLK.csproj.GenerateResource.cache
 D:\Github\doandotnet\QLLK\obj\Debug\QLLK.csproj.CoreCompileInputs.cache
 D:\Github\doandotnet\QLLK\obj\Debug\QLLK.exe
 D:\Github\doandotnet\QLLK\obj\Debug\QLLK.pdb
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.GUI.GUI_Product.resources
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.GUI_Login.resources
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.GUI.GUI_Account.resources
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.GUI.GUI_Home.resources
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.GUI.GUI_CreateBill.resources

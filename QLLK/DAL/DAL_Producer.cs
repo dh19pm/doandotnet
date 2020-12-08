@@ -7,24 +7,20 @@ using System.Threading.Tasks;
 
 namespace QLLK.DAL
 {
-    class Bill
+    class DAL_Producer
     {
         Connect connect = new Connect();
-        public Bill()
-        {
-
-        }
         public DataTable Get()
         {
-            return connect.Query("SELECT * FROM BILL").Fetch();
+            return connect.Query("SELECT * FROM producer").FetchAll();
         }
         public void Insert(string[] value)
         {
-            connect.Query("INSERT INTO BILL(AMOUNT, PRICE, CREATE_DATE) VALUES(?, ?, ?)").Value(value);
+            connect.Query("INSERT INTO producer(name) VALUES(?)").Value(value);
         }
         public void Update(string[] value)
         {
-            connect.Query("UPDATE BILL SET AMOUNT = ?, PRICE = ?, CREATE_DATE = ? WHERE ID = ?").Value(value);
+            connect.Query("UPDATE producer SET name = ? WHERE id = ?").Value(value);
         }
     }
 }
