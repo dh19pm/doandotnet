@@ -33,11 +33,11 @@
             this.txtFullname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTotalCost = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -84,12 +84,12 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Số điện thoại:";
             // 
-            // textBox1
+            // txtPhoneNumber
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(107, 79);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(204, 20);
+            this.txtPhoneNumber.TabIndex = 4;
             // 
             // label3
             // 
@@ -100,12 +100,12 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Địa chỉ:";
             // 
-            // textBox2
+            // txtAddress
             // 
-            this.textBox2.Location = new System.Drawing.Point(107, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtAddress.Location = new System.Drawing.Point(107, 116);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(204, 20);
+            this.txtAddress.TabIndex = 6;
             // 
             // label4
             // 
@@ -116,13 +116,13 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Thành tiền:";
             // 
-            // textBox3
+            // txtTotalCost
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(107, 154);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(204, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtTotalCost.Enabled = false;
+            this.txtTotalCost.Location = new System.Drawing.Point(107, 154);
+            this.txtTotalCost.Name = "txtTotalCost";
+            this.txtTotalCost.Size = new System.Drawing.Size(204, 20);
+            this.txtTotalCost.TabIndex = 8;
             // 
             // GUI_CreateBill
             // 
@@ -130,11 +130,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(355, 275);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtTotalCost);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFullname);
             this.Controls.Add(this.btnCancel);
@@ -145,6 +145,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lập Hóa Đơn";
+            this.Load += new System.EventHandler(this.GUI_CreateBill_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,10 +158,10 @@
         private System.Windows.Forms.TextBox txtFullname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTotalCost;
     }
 }

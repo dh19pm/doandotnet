@@ -30,5 +30,12 @@ namespace QLLK.DAL
         {
             connect.Query("DELETE FROM product WHERE id = ?").Value(value).Execute();
         }
+        public int getCost(string[] value)
+        {
+            DataRow data = connect.Query("SELECT price FROM product WHERE id = ?").Value(value).Fetch();
+            if (data != null)
+                return Convert.ToInt32(data["price"]);
+            return 0;
+        }
     }
 }

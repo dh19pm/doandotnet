@@ -24,7 +24,7 @@ namespace QLLK.DAL
         }
         public void Update(string[] value)
         {
-            connect.Query("UPDATE import SET create_date = ? WHERE id = ?").Value(value);
+            connect.Query("UPDATE import SET create_date = ? WHERE id = ?").Value(value).Execute();
         }
         public DataRow getDate(string[] value)
         {

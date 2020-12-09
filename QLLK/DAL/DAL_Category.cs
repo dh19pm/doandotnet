@@ -16,11 +16,11 @@ namespace QLLK.DAL
         }
         public void Insert(string[] value)
         {
-            connect.Query("INSERT INTO category(name) VALUES(?)").Value(value);
+            connect.Query("INSERT INTO category(name) VALUES(?)").Value(value).Execute();
         }
         public void Update(string[] value)
         {
-            connect.Query("UPDATE category SET name = ?  WHERE id = ?").Value(value);
+            connect.Query("UPDATE category SET name = ?  WHERE id = ?").Value(value).Execute();
         }
     }
 }

@@ -28,12 +28,14 @@ CREATE TABLE import
 CREATE TABLE bill
 (
 	id INT NOT NULL IDENTITY(1,1),
+	account_id INT NOT NULL,
 	customer_id INT NOT NULL,
 	amount INT NOT NULL,
 	price INT NOT NULL,
 	create_date DATE NOT NULL,
 	PRIMARY KEY (id),
-    FOREIGN KEY (customer_id) REFERENCES customer(id)
+    FOREIGN KEY (account_id) REFERENCES account(id),
+    FOREIGN KEY (customer_id) REFERENCES customer(id),
 );
 
 CREATE TABLE producer
@@ -81,8 +83,8 @@ CREATE TABLE bill_product
 (
 	id INT NOT NULL IDENTITY(1,1),
 	bill_id INT NOT NULL,
-	amount INT NOT NULL,
 	product_id INT NOT NULL,
+	amount INT NOT NULL,
 	PRIMARY KEY (id),
     FOREIGN KEY (bill_id) REFERENCES bill(id),
 	FOREIGN KEY (product_id) REFERENCES product(id)

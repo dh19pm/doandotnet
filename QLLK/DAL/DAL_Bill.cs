@@ -14,13 +14,13 @@ namespace QLLK.DAL
         {
             return connect.Query("SELECT * FROM bill").FetchAll();
         }
-        public void Insert(string[] value)
+        public int InsertID(string[] value)
         {
-            connect.Query("INSERT INTO bill(customer_id, amount, price, create_date) VALUES(?, ?, ?, ?)").Value(value);
+            return connect.Query("INSERT INTO bill(account_id, customer_id, amount, price, create_date) VALUES(?, ?, ?, ?, ?); SELECT SCOPE_IDENTITY()").Value(value).GetID();
         }
         public void Update(string[] value)
         {
-            connect.Query("UPDATE bill SET customer_id = ?, amount = ?, price = ?, create_date = ? WHERE id = ?").Value(value);
+            connect.Query("UPDATE bill SET account_id = ?, customer_id = ?, amount = ?, price = ?, create_date = ? WHERE id = ?").Value(value).Execute();
         }
     }
 }

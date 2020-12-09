@@ -16,11 +16,11 @@ namespace QLLK.DAL
         }
         public void Insert(string[] value)
         {
-            connect.Query("INSERT INTO bill_product(bill_id, product_id) VALUES(?, ?)").Value(value);
+            connect.Query("INSERT INTO bill_product(bill_id, product_id, amount) VALUES(?, ?, ?)").Value(value).Execute();
         }
         public void Update(string[] value)
         {
-            connect.Query("UPDATE bill_product SET bill_id = ?, product_id = ? WHERE id = ?").Value(value);
+            connect.Query("UPDATE bill_product SET bill_id = ?, product_id = ?, amount = ? WHERE id = ?").Value(value).Execute();
         }
     }
 }
