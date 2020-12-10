@@ -12,3 +12,4 @@ D:\Github\doandotnet\QLLK\obj\Debug\QLLK.GUI_Login.resources
 D:\Github\doandotnet\QLLK\obj\Debug\QLLK.GUI.GUI_Account.resources
 D:\Github\doandotnet\QLLK\obj\Debug\QLLK.GUI.GUI_Home.resources
 D:\Github\doandotnet\QLLK\obj\Debug\QLLK.GUI.GUI_CreateBill.resources
+D:\Github\doandotnet\QLLK\obj\Debug\QLLK.GUI.GUI_Category.resources

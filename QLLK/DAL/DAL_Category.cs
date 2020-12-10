@@ -22,5 +22,9 @@ namespace QLLK.DAL
         {
             connect.Query("UPDATE category SET name = ?  WHERE id = ?").Value(value).Execute();
         }
+        public void Delete(string[] value)
+        {
+            connect.Query("DELETE FROM category WHERE id = ?").Value(value).Execute();
+        }
     }
 }

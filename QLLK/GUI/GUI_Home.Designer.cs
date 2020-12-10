@@ -77,19 +77,20 @@
             // btnCategory
             // 
             this.btnCategory.Name = "btnCategory";
-            this.btnCategory.Size = new System.Drawing.Size(115, 22);
+            this.btnCategory.Size = new System.Drawing.Size(180, 22);
             this.btnCategory.Text = "Loại";
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // btnProducer
             // 
             this.btnProducer.Name = "btnProducer";
-            this.btnProducer.Size = new System.Drawing.Size(115, 22);
+            this.btnProducer.Size = new System.Drawing.Size(180, 22);
             this.btnProducer.Text = "Hãng";
             // 
             // btnOrigin
             // 
             this.btnOrigin.Name = "btnOrigin";
-            this.btnOrigin.Size = new System.Drawing.Size(115, 22);
+            this.btnOrigin.Size = new System.Drawing.Size(180, 22);
             this.btnOrigin.Text = "Xuất Xứ";
             // 
             // btnLogin

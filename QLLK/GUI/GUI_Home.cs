@@ -68,5 +68,11 @@ namespace QLLK.GUI
             GUI_Product form = new GUI_Product();
             form.ShowDialog();
         }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            GUI_Category form = new GUI_Category();
+            form.ShowDialog();
+        }
     }
 }

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BUS_Category.cs" />
     <Compile Include="BUS\BUS_CreateBill.cs" />
     <Compile Include="BUS\BUS_Login.cs" />
     <Compile Include="BUS\BUS_Product.cs" />
@@ -73,6 +74,12 @@
     </Compile>
     <Compile Include="GUI\GUI_Account.Designer.cs">
       <DependentUpon>GUI_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Category.Designer.cs">
+      <DependentUpon>GUI_Category.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUI_CreateBill.cs">
       <SubType>Form</SubType>
@@ -102,6 +109,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\GUI_Account.resx">
       <DependentUpon>GUI_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_Category.resx">
+      <DependentUpon>GUI_Category.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_CreateBill.resx">
       <DependentUpon>GUI_CreateBill.cs</DependentUpon>
