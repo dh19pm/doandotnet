@@ -48,6 +48,7 @@ namespace QLLK.GUI
         private void resetInput()
         {
             txtId.Clear();
+            txtFullname.Clear();
             txtName.Clear();
             txtPass.Clear();
         }

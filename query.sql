@@ -2,8 +2,9 @@ CREATE TABLE account
 (
 	id INT NOT NULL IDENTITY(1,1),
 	position INT NOT NULL,
-	username VARCHAR(255) NOT NULL,
-	password VARCHAR(255) NOT NULL,
+	fullname NVARCHAR(255) NOT NULL,
+	username NVARCHAR(255) NOT NULL,
+	password NVARCHAR(255) NOT NULL,
 	create_date DATE NOT NULL,
 	PRIMARY KEY (id),
 	CONSTRAINT CHK_POSITION CHECK (position IN (0, 1))
@@ -12,9 +13,9 @@ CREATE TABLE account
 CREATE TABLE customer
 (
 	id INT NOT NULL IDENTITY(1,1),
-	fullname VARCHAR(255) NOT NULL,
-	phone_number VARCHAR(255) NOT NULL,
-	address VARCHAR(255) NOT NULL,
+	fullname NVARCHAR(255) NOT NULL,
+	phone_number NVARCHAR(255) NOT NULL,
+	address NVARCHAR(255) NOT NULL,
 	PRIMARY KEY (id)
 );
 
@@ -35,27 +36,27 @@ CREATE TABLE bill
 	create_date DATE NOT NULL,
 	PRIMARY KEY (id),
     FOREIGN KEY (account_id) REFERENCES account(id),
-    FOREIGN KEY (customer_id) REFERENCES customer(id),
+    FOREIGN KEY (customer_id) REFERENCES customer(id) ON DELETE CASCADE,
 );
 
 CREATE TABLE producer
 (
 	id INT NOT NULL IDENTITY(1,1),
-	name VARCHAR(255) NOT NULL
+	name NVARCHAR(255) NOT NULL
 	PRIMARY KEY (id)
 );
 
 CREATE TABLE origin
 (
 	id INT NOT NULL IDENTITY(1,1),
-	name VARCHAR(255) NOT NULL
+	name NVARCHAR(255) NOT NULL
 	PRIMARY KEY (id)
 );
 
 CREATE TABLE category
 (
 	id INT NOT NULL IDENTITY(1,1),
-	name VARCHAR(255) NOT NULL
+	name NVARCHAR(255) NOT NULL
 	PRIMARY KEY (id)
 );
 
@@ -67,7 +68,7 @@ CREATE TABLE product
 	producer_id INT NOT NULL,
 	import_id INT NOT NULL,
 	origin_id INT NOT NULL,
-	name VARCHAR(255) NOT NULL,
+	name NVARCHAR(255) NOT NULL,
 	amount INT NOT NULL,
 	price INT NOT NULL,
 	warranty_period INT NOT NULL,
@@ -86,7 +87,7 @@ CREATE TABLE bill_product
 	product_id INT NOT NULL,
 	amount INT NOT NULL,
 	PRIMARY KEY (id),
-    FOREIGN KEY (bill_id) REFERENCES bill(id),
+    FOREIGN KEY (bill_id) REFERENCES bill(id) ON DELETE CASCADE,
 	FOREIGN KEY (product_id) REFERENCES product(id)
 );
 
@@ -99,3 +100,6 @@ DROP TABLE producer;
 DROP TABLE import;
 DROP TABLE account;
 DROP TABLE customer;
+
+
+SELECT b.*, a.fullname account, c.fullname customer FROM (bill b INNER JOIN account a ON b.account_id = a.id) INNER JOIN customer c ON b.customer_id = c.id;
