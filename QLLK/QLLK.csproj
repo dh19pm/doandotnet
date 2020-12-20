@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,13 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BUS_Account.cs" />
+    <Compile Include="BUS\BUS_Bill.cs" />
     <Compile Include="BUS\BUS_Category.cs" />
-    <Compile Include="BUS\BUS_CreateBill.cs" />
+    <Compile Include="BUS\BUS_Create_Bill.cs" />
+    <Compile Include="BUS\BUS_Customer.cs" />
+    <Compile Include="BUS\BUS_Export_Bill.cs" />
     <Compile Include="BUS\BUS_Login.cs" />
+    <Compile Include="BUS\BUS_Origin.cs" />
+    <Compile Include="BUS\BUS_Producer.cs" />
     <Compile Include="BUS\BUS_Product.cs" />
+    <Compile Include="BUS\BUS_Revenue.cs" />
     <Compile Include="DAL\Connect.cs" />
     <Compile Include="DAL\DAL_Account.cs" />
     <Compile Include="DAL\DAL_Customer.cs" />
+    <Compile Include="DAL\DAL_Export_Bill.cs" />
     <Compile Include="DAL\DAL_Import.cs" />
     <Compile Include="DAL\DAL_Producer.cs" />
     <Compile Include="DAL\DAL_Origin.cs" />
@@ -60,8 +69,9 @@
     <Compile Include="DAL\DAL_Category.cs" />
     <Compile Include="DAL\DAL_Product.cs" />
     <Compile Include="DAL\DAL_Bill.cs" />
+    <Compile Include="DAL\DAL_Revenue.cs" />
     <Compile Include="DTO\DTO_Customer.cs" />
-    <Compile Include="DTO\DTO_BillProduct.cs" />
+    <Compile Include="DTO\DTO_Bill_Product.cs" />
     <Compile Include="DTO\DTO_Import.cs" />
     <Compile Include="DTO\DTO_Bill.cs" />
     <Compile Include="DTO\DTO_Account.cs" />
@@ -75,17 +85,35 @@
     <Compile Include="GUI\GUI_Account.Designer.cs">
       <DependentUpon>GUI_Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GUI_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Bill.Designer.cs">
+      <DependentUpon>GUI_Bill.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GUI_Category.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\GUI_Category.Designer.cs">
       <DependentUpon>GUI_Category.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_CreateBill.cs">
+    <Compile Include="GUI\GUI_Create_Bill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_CreateBill.Designer.cs">
-      <DependentUpon>GUI_CreateBill.cs</DependentUpon>
+    <Compile Include="GUI\GUI_Create_Bill.Designer.cs">
+      <DependentUpon>GUI_Create_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Customer.Designer.cs">
+      <DependentUpon>GUI_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_Export_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Export_Bill.Designer.cs">
+      <DependentUpon>GUI_Export_Bill.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\GUI_Home.cs">
       <SubType>Form</SubType>
@@ -99,22 +127,49 @@
     <Compile Include="GUI\GUI_Login.Designer.cs">
       <DependentUpon>GUI_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GUI_Origin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Origin.Designer.cs">
+      <DependentUpon>GUI_Origin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_Producer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Producer.Designer.cs">
+      <DependentUpon>GUI_Producer.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\GUI_Product.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\GUI_Product.Designer.cs">
       <DependentUpon>GUI_Product.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GUI_Revenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Revenue.Designer.cs">
+      <DependentUpon>GUI_Revenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\GUI_Account.resx">
       <DependentUpon>GUI_Account.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_Bill.resx">
+      <DependentUpon>GUI_Bill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_Category.resx">
       <DependentUpon>GUI_Category.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUI_CreateBill.resx">
-      <DependentUpon>GUI_CreateBill.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\GUI_Create_Bill.resx">
+      <DependentUpon>GUI_Create_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_Customer.resx">
+      <DependentUpon>GUI_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_Export_Bill.resx">
+      <DependentUpon>GUI_Export_Bill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_Home.resx">
       <DependentUpon>GUI_Home.cs</DependentUpon>
@@ -122,8 +177,17 @@
     <EmbeddedResource Include="GUI\GUI_Login.resx">
       <DependentUpon>GUI_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_Origin.resx">
+      <DependentUpon>GUI_Origin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_Producer.resx">
+      <DependentUpon>GUI_Producer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_Product.resx">
       <DependentUpon>GUI_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_Revenue.resx">
+      <DependentUpon>GUI_Revenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -113,11 +113,6 @@ namespace QLLK.GUI
             this.bill.Clear();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void endableAll(bool val)
         {
             btnAdd.Enabled = val;
@@ -133,9 +128,12 @@ namespace QLLK.GUI
             txtAmount.Clear();
             txtPrice.Clear();
             txtWarrantyDate.Clear();
-            cboCategory.SelectedIndex = 0;
-            cboOrigin.SelectedIndex = 0;
-            cboProducer.SelectedIndex = 0;
+            if(cboCategory.SelectedIndex != -1)
+                cboCategory.SelectedIndex = 0;
+            if (cboOrigin.SelectedIndex != -1)
+                cboOrigin.SelectedIndex = 0;
+            if (cboProducer.SelectedIndex != -1)
+                cboProducer.SelectedIndex = 0;
         }
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
@@ -153,13 +151,19 @@ namespace QLLK.GUI
                 }
             }
             string[] temp = this.bill.ToArray();
-            GUI_CreateBill form = new GUI_CreateBill(temp);
+            if (temp.Length < 1)
+            {
+                MessageBox.Show("Vui lòng chọn sản phẩm cần mua để lập hóa đơn!");
+                return;
+            }
+            GUI_Create_Bill form = new GUI_Create_Bill(temp);
             form.ShowDialog();
+            GUI_Product_Load(sender, e);
         }
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex == 9)
+            if (e.RowIndex >= 0 && e.ColumnIndex == 10)
             {
                 DataGridViewRow row = dataGridView.Rows[e.RowIndex];
                 row.Cells["colChecked"].Value = Convert.ToBoolean(row.Cells["colChecked"].EditedFormattedValue) == true ? 1 : 0;
@@ -185,7 +189,7 @@ namespace QLLK.GUI
 
         private void dataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex == 8)
+            if (e.RowIndex >= 0 && e.ColumnIndex == 9)
             {
                 DataGridViewRow row = dataGridView.Rows[e.RowIndex];
                 if (!isInt(row.Cells["colAmountBuy"].Value.ToString()))

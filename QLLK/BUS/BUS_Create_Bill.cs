@@ -9,7 +9,7 @@ using QLLK.DTO;
 
 namespace QLLK.BUS
 {
-    class BUS_CreateBill
+    class BUS_Create_Bill
     {
         DAL_Bill dataBill = new DAL_Bill();
         DAL_Bill_Product dataBillProduct = new DAL_Bill_Product();
@@ -28,6 +28,20 @@ namespace QLLK.BUS
                 this.amount += Convert.ToInt32(word[1]);
             }
             return tong;
+        }
+        public void EditAmount(int id, int buy)
+        {
+            string[] value =
+            {
+                id.ToString()
+            };
+            int amount = dataProduct.getAmount(value);
+            string[] values =
+            {
+                (amount - buy).ToString(),
+                id.ToString()
+            };
+            dataProduct.UpdateAmount(values);
         }
         public void addItem(DTO_Customer info, string[] bill, int totalCost)
         {
@@ -76,6 +90,7 @@ namespace QLLK.BUS
                     word[1].ToString()
                 };
                 dataBillProduct.Insert(valueBillProduct);
+                EditAmount(Convert.ToInt32(word[0]), Convert.ToInt32(word[1]));
             }
 
         }

@@ -20,7 +20,11 @@ namespace QLLK.DAL
         }
         public void Update(string[] value)
         {
-            connect.Query("UPDATE producer SET name = ? WHERE id = ?").Value(value).Execute();
+            connect.Query("UPDATE producer SET name = ?  WHERE id = ?").Value(value).Execute();
+        }
+        public void Delete(string[] value)
+        {
+            connect.Query("DELETE FROM producer WHERE id = ?").Value(value).Execute();
         }
     }
 }

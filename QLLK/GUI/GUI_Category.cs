@@ -36,11 +36,13 @@ namespace QLLK.GUI
             btnEdit.Enabled = val;
             btnSave.Enabled = !val;
         }
+
         private void resetInput()
         {
             txtId.Clear();
             txtName.Clear();
         }
+
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             GUI_Category_Load(sender, e);
@@ -85,7 +87,6 @@ namespace QLLK.GUI
 
             if (this.action == "add")
                 bus.addItem(info);
-
             if (this.action == "edit")
             {
                 info.Id = Convert.ToInt32(txtId.Text);

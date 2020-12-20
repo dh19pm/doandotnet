@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_Product));
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colWarrantyPeriod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colImport = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAmountBuy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colChecked = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -81,8 +82,6 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnExit = new System.Windows.Forms.ToolStripButton();
             this.btnBill = new System.Windows.Forms.ToolStripButton();
             this.groupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -110,9 +109,9 @@
             this.groupBox.Controls.Add(this.cboProducer);
             this.groupBox.Controls.Add(this.cboCategory);
             this.groupBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox.Location = new System.Drawing.Point(3, 3);
+            this.groupBox.Location = new System.Drawing.Point(5, 5);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(777, 107);
+            this.groupBox.Size = new System.Drawing.Size(773, 107);
             this.groupBox.TabIndex = 1;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Thông tin sản phẩm";
@@ -136,6 +135,7 @@
             // 
             // cboOrigin
             // 
+            this.cboOrigin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboOrigin.FormattingEnabled = true;
             this.cboOrigin.Location = new System.Drawing.Point(431, 24);
             this.cboOrigin.Name = "cboOrigin";
@@ -237,6 +237,7 @@
             // 
             // cboProducer
             // 
+            this.cboProducer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboProducer.FormattingEnabled = true;
             this.cboProducer.Location = new System.Drawing.Point(230, 61);
             this.cboProducer.Name = "cboProducer";
@@ -245,6 +246,7 @@
             // 
             // cboCategory
             // 
+            this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategory.FormattingEnabled = true;
             this.cboCategory.Location = new System.Drawing.Point(230, 24);
             this.cboCategory.Name = "cboCategory";
@@ -256,9 +258,9 @@
             this.groupBox2.Controls.Add(this.dataGridView);
             this.groupBox2.Controls.Add(this.bindingNavigator);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 110);
+            this.groupBox2.Location = new System.Drawing.Point(5, 112);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(777, 441);
+            this.groupBox2.Size = new System.Drawing.Size(773, 437);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách sản phẩm";
@@ -281,6 +283,7 @@
             this.colAmount,
             this.colPrice,
             this.colWarrantyPeriod,
+            this.colImport,
             this.colAmountBuy,
             this.colChecked});
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -289,7 +292,7 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(771, 389);
+            this.dataGridView.Size = new System.Drawing.Size(767, 385);
             this.dataGridView.TabIndex = 5;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             this.dataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellValueChanged);
@@ -308,7 +311,7 @@
             // 
             this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colName.DataPropertyName = "name";
-            this.colName.FillWeight = 47.0309F;
+            this.colName.FillWeight = 28.44618F;
             this.colName.HeaderText = "Tên";
             this.colName.Name = "colName";
             this.colName.ReadOnly = true;
@@ -316,7 +319,7 @@
             // colCategory
             // 
             this.colCategory.DataPropertyName = "category";
-            this.colCategory.FillWeight = 25.04737F;
+            this.colCategory.FillWeight = 15.14966F;
             this.colCategory.HeaderText = "Loại";
             this.colCategory.Name = "colCategory";
             this.colCategory.ReadOnly = true;
@@ -324,7 +327,7 @@
             // colProducer
             // 
             this.colProducer.DataPropertyName = "producer";
-            this.colProducer.FillWeight = 25.04737F;
+            this.colProducer.FillWeight = 15.14966F;
             this.colProducer.HeaderText = "Hãng";
             this.colProducer.Name = "colProducer";
             this.colProducer.ReadOnly = true;
@@ -332,7 +335,7 @@
             // colOrigin
             // 
             this.colOrigin.DataPropertyName = "origin";
-            this.colOrigin.FillWeight = 25.04737F;
+            this.colOrigin.FillWeight = 15.14966F;
             this.colOrigin.HeaderText = "Xuất xứ";
             this.colOrigin.Name = "colOrigin";
             this.colOrigin.ReadOnly = true;
@@ -340,10 +343,10 @@
             // colAmount
             // 
             this.colAmount.DataPropertyName = "amount";
-            dataGridViewCellStyle13.Format = "N0";
-            dataGridViewCellStyle13.NullValue = null;
-            this.colAmount.DefaultCellStyle = dataGridViewCellStyle13;
-            this.colAmount.FillWeight = 31.54119F;
+            dataGridViewCellStyle1.Format = "N0";
+            dataGridViewCellStyle1.NullValue = null;
+            this.colAmount.DefaultCellStyle = dataGridViewCellStyle1;
+            this.colAmount.FillWeight = 19.07738F;
             this.colAmount.HeaderText = "Số lượng";
             this.colAmount.Name = "colAmount";
             this.colAmount.ReadOnly = true;
@@ -351,10 +354,10 @@
             // colPrice
             // 
             this.colPrice.DataPropertyName = "price";
-            dataGridViewCellStyle14.Format = "C0";
-            dataGridViewCellStyle14.NullValue = null;
-            this.colPrice.DefaultCellStyle = dataGridViewCellStyle14;
-            this.colPrice.FillWeight = 31.54119F;
+            dataGridViewCellStyle2.Format = "C0";
+            dataGridViewCellStyle2.NullValue = null;
+            this.colPrice.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colPrice.FillWeight = 19.07738F;
             this.colPrice.HeaderText = "Giá tiền";
             this.colPrice.Name = "colPrice";
             this.colPrice.ReadOnly = true;
@@ -362,26 +365,34 @@
             // colWarrantyPeriod
             // 
             this.colWarrantyPeriod.DataPropertyName = "warranty_period";
-            dataGridViewCellStyle15.Format = "N0";
-            dataGridViewCellStyle15.NullValue = null;
-            this.colWarrantyPeriod.DefaultCellStyle = dataGridViewCellStyle15;
-            this.colWarrantyPeriod.FillWeight = 31.54119F;
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.colWarrantyPeriod.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colWarrantyPeriod.FillWeight = 19.07738F;
             this.colWarrantyPeriod.HeaderText = "Hạn bảo hành";
             this.colWarrantyPeriod.Name = "colWarrantyPeriod";
             this.colWarrantyPeriod.ReadOnly = true;
             // 
+            // colImport
+            // 
+            this.colImport.DataPropertyName = "create_date";
+            this.colImport.FillWeight = 21.55866F;
+            this.colImport.HeaderText = "Ngày nhập";
+            this.colImport.Name = "colImport";
+            this.colImport.ReadOnly = true;
+            // 
             // colAmountBuy
             // 
-            dataGridViewCellStyle16.NullValue = "0";
-            this.colAmountBuy.DefaultCellStyle = dataGridViewCellStyle16;
-            this.colAmountBuy.FillWeight = 31.37486F;
+            dataGridViewCellStyle4.NullValue = "0";
+            this.colAmountBuy.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colAmountBuy.FillWeight = 18.97678F;
             this.colAmountBuy.HeaderText = "Số lượng mua";
             this.colAmountBuy.Name = "colAmountBuy";
             // 
             // colChecked
             // 
             this.colChecked.FalseValue = "0";
-            this.colChecked.FillWeight = 13.8087F;
+            this.colChecked.FillWeight = 8.352057F;
             this.colChecked.HeaderText = "Chọn";
             this.colChecked.Name = "colChecked";
             this.colChecked.TrueValue = "1";
@@ -413,9 +424,7 @@
             this.toolStripSeparator3,
             this.btnSave,
             this.btnRefresh,
-            this.btnBill,
-            this.toolStripSeparator2,
-            this.btnExit});
+            this.btnBill});
             this.bindingNavigator.Location = new System.Drawing.Point(3, 16);
             this.bindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -424,7 +433,7 @@
             this.bindingNavigator.Name = "bindingNavigator";
             this.bindingNavigator.Padding = new System.Windows.Forms.Padding(5);
             this.bindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator.Size = new System.Drawing.Size(771, 33);
+            this.bindingNavigator.Size = new System.Drawing.Size(767, 33);
             this.bindingNavigator.TabIndex = 1;
             this.bindingNavigator.Text = "bindingNavigator1";
             // 
@@ -462,6 +471,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -499,6 +509,7 @@
             // 
             this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(200, 23);
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
@@ -563,21 +574,6 @@
             this.btnRefresh.Text = "Làm Mới";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 23);
-            // 
-            // btnExit
-            // 
-            this.btnExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(23, 20);
-            this.btnExit.Text = "Thoát";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // btnBill
             // 
             this.btnBill.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -585,7 +581,7 @@
             this.btnBill.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBill.Name = "btnBill";
             this.btnBill.Size = new System.Drawing.Size(23, 20);
-            this.btnBill.Text = "toolStripButton1";
+            this.btnBill.Text = "Lập Hóa Đơn";
             this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
             // GUI_Product
@@ -596,7 +592,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox);
             this.Name = "GUI_Product";
-            this.Padding = new System.Windows.Forms.Padding(3);
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Tin Sản Phẩm";
             this.Load += new System.EventHandler(this.GUI_Product_Load);
@@ -630,8 +626,6 @@
         private System.Windows.Forms.ToolStripButton btnSave;
         private System.Windows.Forms.ToolStripButton btnRefresh;
         private System.Windows.Forms.ToolStripTextBox txtSearch;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton btnExit;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtWarrantyDate;
         private System.Windows.Forms.Label label6;
@@ -652,6 +646,7 @@
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.ToolStripButton btnBill;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCategory;
@@ -660,8 +655,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn colWarrantyPeriod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colImport;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAmountBuy;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colChecked;
-        private System.Windows.Forms.ToolStripButton btnBill;
     }
 }

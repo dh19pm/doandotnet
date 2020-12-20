@@ -1,6 +1,6 @@
 ﻿namespace QLLK.GUI
 {
-    partial class GUI_CreateBill
+    partial class GUI_Create_Bill
     {
         /// <summary>
         /// Required designer variable.
@@ -58,6 +58,7 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Hủy bỏ";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtFullname
             // 

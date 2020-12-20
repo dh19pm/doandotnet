@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLLK.DTO
 {
-    class DTO_BillProduct
+    class DTO_Bill_Product
     {
         private int id;
         DTO_Bill bill = new DTO_Bill();

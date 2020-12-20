@@ -10,6 +10,7 @@ namespace QLLK.DTO
     {
         private int id;
         private int position;
+        private string fullname;
         private string username;
         private string password;
         private DateTime createDate;
@@ -18,5 +19,6 @@ namespace QLLK.DTO
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
         public DateTime CreateDate { get => createDate; set => createDate = value; }
+        public string Fullname { get => fullname; set => fullname = value; }
     }
 }

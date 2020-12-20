@@ -53,9 +53,16 @@ namespace QLLK.DAL
         }
         public void Execute()
         {
-            cmd.ExecuteNonQuery();
-            cmd.Dispose();
-        }
+            try
+            {
+                cmd.ExecuteNonQuery();
+                cmd.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+}
         public int GetID()
         {
             return Convert.ToInt32(cmd.ExecuteScalar());

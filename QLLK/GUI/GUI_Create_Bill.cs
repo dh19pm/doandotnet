@@ -12,11 +12,11 @@ using QLLK.DTO;
 
 namespace QLLK.GUI
 {
-    public partial class GUI_CreateBill : Form
+    public partial class GUI_Create_Bill : Form
     {
         string[] bill;
-        BUS_CreateBill bus = new BUS_CreateBill();
-        public GUI_CreateBill(string[] temp)
+        BUS_Create_Bill bus = new BUS_Create_Bill();
+        public GUI_Create_Bill(string[] temp)
         {
             this.bill = temp;
             InitializeComponent();
@@ -24,6 +24,16 @@ namespace QLLK.GUI
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            if(txtFullname.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng!");
+                return;
+            }
+            if (txtPhoneNumber.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại khách hàng!");
+                return;
+            }
             DTO_Customer info = new DTO_Customer();
             info.Fullname = txtFullname.Text;
             info.PhoneNumber = txtPhoneNumber.Text;
@@ -36,6 +46,11 @@ namespace QLLK.GUI
         private void GUI_CreateBill_Load(object sender, EventArgs e)
         {
             txtTotalCost.Text = bus.totalCost(this.bill).ToString();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

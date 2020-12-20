@@ -12,7 +12,7 @@ namespace QLLK.DAL
         Connect connect = new Connect();
         public DataTable Get()
         {
-            return connect.Query("SELECT * FROM bill").FetchAll();
+            return connect.Query("SELECT b.*, c.fullname customer, a.fullname account FROM (bill b INNER JOIN customer c ON b.customer_id = c.id) INNER JOIN account a ON b.account_id = a.id").FetchAll();
         }
         public int InsertID(string[] value)
         {
@@ -21,6 +21,10 @@ namespace QLLK.DAL
         public void Update(string[] value)
         {
             connect.Query("UPDATE bill SET account_id = ?, customer_id = ?, amount = ?, price = ?, create_date = ? WHERE id = ?").Value(value).Execute();
+        }
+        public void Delete(string[] value)
+        {
+            connect.Query("DELETE FROM bill WHERE id = ?").Value(value).Execute();
         }
     }
 }

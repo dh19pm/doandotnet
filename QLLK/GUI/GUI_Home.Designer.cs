@@ -28,28 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_Home));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.btnThem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCategory = new System.Windows.Forms.ToolStripMenuItem();
             this.btnProducer = new System.Windows.Forms.ToolStripMenuItem();
             this.btnOrigin = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.groupBox = new System.Windows.Forms.GroupBox();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.txtCreateDate = new System.Windows.Forms.TextBox();
-            this.lbCreateDate = new System.Windows.Forms.Label();
-            this.txtPosition = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.lbUsername = new System.Windows.Forms.Label();
-            this.lbPosition = new System.Windows.Forms.Label();
-            this.btnProduct = new System.Windows.Forms.Button();
-            this.btnBill = new System.Windows.Forms.Button();
-            this.btnImport = new System.Windows.Forms.Button();
-            this.gpbOption = new System.Windows.Forms.GroupBox();
-            this.btnAccount = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnLogin = new System.Windows.Forms.ToolStripButton();
+            this.btnLogout = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnProducts = new System.Windows.Forms.ToolStripButton();
+            this.btnBill = new System.Windows.Forms.ToolStripButton();
+            this.btnCustomer = new System.Windows.Forms.ToolStripButton();
+            this.btnRevenue = new System.Windows.Forms.ToolStripButton();
+            this.btnAccounts = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnTutorial = new System.Windows.Forms.ToolStripButton();
+            this.btnInformation = new System.Windows.Forms.ToolStripButton();
+            this.btnExit = new System.Windows.Forms.ToolStripButton();
             this.menuStrip.SuspendLayout();
-            this.groupBox.SuspendLayout();
-            this.gpbOption.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -60,7 +59,7 @@
             this.btnThem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(431, 24);
+            this.menuStrip.Size = new System.Drawing.Size(709, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -86,180 +85,183 @@
             this.btnProducer.Name = "btnProducer";
             this.btnProducer.Size = new System.Drawing.Size(180, 22);
             this.btnProducer.Text = "Hãng";
+            this.btnProducer.Click += new System.EventHandler(this.btnProducer_Click);
             // 
             // btnOrigin
             // 
             this.btnOrigin.Name = "btnOrigin";
             this.btnOrigin.Size = new System.Drawing.Size(180, 22);
             this.btnOrigin.Text = "Xuất Xứ";
+            this.btnOrigin.Click += new System.EventHandler(this.btnOrigin_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnLogin,
+            this.btnLogout,
+            this.toolStripSeparator1,
+            this.btnProducts,
+            this.btnBill,
+            this.btnCustomer,
+            this.btnRevenue,
+            this.btnAccounts,
+            this.toolStripSeparator2,
+            this.btnTutorial,
+            this.btnInformation,
+            this.btnExit});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(709, 60);
+            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(67, 85);
+            this.btnLogin.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.Image")));
+            this.btnLogin.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnLogin.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.Size = new System.Drawing.Size(71, 57);
             this.btnLogin.Text = "Đăng Nhập";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // groupBox
-            // 
-            this.groupBox.Controls.Add(this.btnLogout);
-            this.groupBox.Controls.Add(this.txtCreateDate);
-            this.groupBox.Controls.Add(this.btnLogin);
-            this.groupBox.Controls.Add(this.lbCreateDate);
-            this.groupBox.Controls.Add(this.txtPosition);
-            this.groupBox.Controls.Add(this.txtUsername);
-            this.groupBox.Controls.Add(this.lbUsername);
-            this.groupBox.Controls.Add(this.lbPosition);
-            this.groupBox.Location = new System.Drawing.Point(12, 37);
-            this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(206, 184);
-            this.groupBox.TabIndex = 2;
-            this.groupBox.TabStop = false;
-            this.groupBox.Text = "Thông tin tài khoản";
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(67, 141);
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnLogout.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
-            this.btnLogout.TabIndex = 8;
-            this.btnLogout.Text = "Đăng xuất";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Visible = false;
+            this.btnLogout.Size = new System.Drawing.Size(66, 57);
+            this.btnLogout.Text = "Đăng Xuất";
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // txtCreateDate
+            // toolStripSeparator1
             // 
-            this.txtCreateDate.Enabled = false;
-            this.txtCreateDate.Location = new System.Drawing.Point(67, 100);
-            this.txtCreateDate.Name = "txtCreateDate";
-            this.txtCreateDate.Size = new System.Drawing.Size(117, 20);
-            this.txtCreateDate.TabIndex = 7;
-            this.txtCreateDate.Visible = false;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 60);
             // 
-            // lbCreateDate
+            // btnProducts
             // 
-            this.lbCreateDate.AutoSize = true;
-            this.lbCreateDate.Location = new System.Drawing.Point(17, 103);
-            this.lbCreateDate.Name = "lbCreateDate";
-            this.lbCreateDate.Size = new System.Drawing.Size(49, 13);
-            this.lbCreateDate.TabIndex = 6;
-            this.lbCreateDate.Text = "Khỏi tạo:";
-            this.lbCreateDate.Visible = false;
-            // 
-            // txtPosition
-            // 
-            this.txtPosition.Enabled = false;
-            this.txtPosition.Location = new System.Drawing.Point(67, 67);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(117, 20);
-            this.txtPosition.TabIndex = 5;
-            this.txtPosition.Visible = false;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Enabled = false;
-            this.txtUsername.Location = new System.Drawing.Point(67, 33);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(117, 20);
-            this.txtUsername.TabIndex = 4;
-            this.txtUsername.Visible = false;
-            // 
-            // lbUsername
-            // 
-            this.lbUsername.AutoSize = true;
-            this.lbUsername.Location = new System.Drawing.Point(8, 36);
-            this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(58, 13);
-            this.lbUsername.TabIndex = 3;
-            this.lbUsername.Text = "Tài khoản:";
-            this.lbUsername.Visible = false;
-            // 
-            // lbPosition
-            // 
-            this.lbPosition.AutoSize = true;
-            this.lbPosition.Location = new System.Drawing.Point(15, 69);
-            this.lbPosition.Name = "lbPosition";
-            this.lbPosition.Size = new System.Drawing.Size(50, 13);
-            this.lbPosition.TabIndex = 2;
-            this.lbPosition.Text = "Chức vụ:";
-            this.lbPosition.Visible = false;
-            // 
-            // btnProduct
-            // 
-            this.btnProduct.Location = new System.Drawing.Point(45, 31);
-            this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(111, 23);
-            this.btnProduct.TabIndex = 2;
-            this.btnProduct.Text = "Sản Phẩm";
-            this.btnProduct.UseVisualStyleBackColor = true;
-            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            this.btnProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnProducts.Image")));
+            this.btnProducts.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnProducts.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Size = new System.Drawing.Size(64, 57);
+            this.btnProducts.Text = "Sản Phẩm";
+            this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
             // btnBill
             // 
-            this.btnBill.Location = new System.Drawing.Point(45, 64);
+            this.btnBill.Image = ((System.Drawing.Image)(resources.GetObject("btnBill.Image")));
+            this.btnBill.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnBill.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnBill.Name = "btnBill";
-            this.btnBill.Size = new System.Drawing.Size(112, 23);
-            this.btnBill.TabIndex = 3;
+            this.btnBill.Size = new System.Drawing.Size(58, 57);
             this.btnBill.Text = "Hóa Đơn";
-            this.btnBill.UseVisualStyleBackColor = true;
+            this.btnBill.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnBill.Click += new System.EventHandler(this.btnBill_Click);
             // 
-            // btnImport
+            // btnCustomer
             // 
-            this.btnImport.Location = new System.Drawing.Point(45, 99);
-            this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(111, 23);
-            this.btnImport.TabIndex = 4;
-            this.btnImport.Text = "Nhập Kho";
-            this.btnImport.UseVisualStyleBackColor = true;
+            this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
+            this.btnCustomer.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnCustomer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(76, 57);
+            this.btnCustomer.Text = "Khách Hàng";
+            this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
-            // gpbOption
+            // btnRevenue
             // 
-            this.gpbOption.Controls.Add(this.btnAccount);
-            this.gpbOption.Controls.Add(this.btnProduct);
-            this.gpbOption.Controls.Add(this.btnImport);
-            this.gpbOption.Controls.Add(this.btnBill);
-            this.gpbOption.Enabled = false;
-            this.gpbOption.Location = new System.Drawing.Point(224, 37);
-            this.gpbOption.Name = "gpbOption";
-            this.gpbOption.Size = new System.Drawing.Size(194, 184);
-            this.gpbOption.TabIndex = 5;
-            this.gpbOption.TabStop = false;
-            this.gpbOption.Text = "Tính năng quản lý";
+            this.btnRevenue.Image = ((System.Drawing.Image)(resources.GetObject("btnRevenue.Image")));
+            this.btnRevenue.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnRevenue.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRevenue.Name = "btnRevenue";
+            this.btnRevenue.Size = new System.Drawing.Size(69, 57);
+            this.btnRevenue.Text = "Doanh Thu";
+            this.btnRevenue.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
             // 
-            // btnAccount
+            // btnAccounts
             // 
-            this.btnAccount.Location = new System.Drawing.Point(45, 134);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(111, 23);
-            this.btnAccount.TabIndex = 5;
-            this.btnAccount.Text = "Tài Khoản";
-            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnAccounts.Image = ((System.Drawing.Image)(resources.GetObject("btnAccounts.Image")));
+            this.btnAccounts.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnAccounts.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAccounts.Name = "btnAccounts";
+            this.btnAccounts.Size = new System.Drawing.Size(62, 57);
+            this.btnAccounts.Text = "Tài Khoản";
+            this.btnAccounts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnAccounts.Click += new System.EventHandler(this.btnAccounts_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 60);
+            // 
+            // btnTutorial
+            // 
+            this.btnTutorial.Image = ((System.Drawing.Image)(resources.GetObject("btnTutorial.Image")));
+            this.btnTutorial.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnTutorial.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTutorial.Name = "btnTutorial";
+            this.btnTutorial.Size = new System.Drawing.Size(72, 57);
+            this.btnTutorial.Text = "Hướng Dẫn";
+            this.btnTutorial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnTutorial.Click += new System.EventHandler(this.btnTutorial_Click);
+            // 
+            // btnInformation
+            // 
+            this.btnInformation.Image = ((System.Drawing.Image)(resources.GetObject("btnInformation.Image")));
+            this.btnInformation.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnInformation.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnInformation.Name = "btnInformation";
+            this.btnInformation.Size = new System.Drawing.Size(64, 57);
+            this.btnInformation.Text = "Thông Tin";
+            this.btnInformation.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnInformation.Click += new System.EventHandler(this.btnInformation_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnExit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(72, 57);
+            this.btnExit.Text = "Thoát Ngay";
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // GUI_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(431, 232);
-            this.Controls.Add(this.gpbOption);
-            this.Controls.Add(this.groupBox);
+            this.ClientSize = new System.Drawing.Size(709, 489);
+            this.ControlBox = false;
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GUI_Home";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Hệ Thống Quản Lý";
+            this.Text = "Phần Mềm Quản Lý Linh Kiện Máy Tính";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.GUI_Home_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
-            this.groupBox.ResumeLayout(false);
-            this.groupBox.PerformLayout();
-            this.gpbOption.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,22 +271,21 @@
 
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem btnThem;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.GroupBox groupBox;
-        private System.Windows.Forms.Button btnProduct;
-        private System.Windows.Forms.Button btnBill;
-        private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.GroupBox gpbOption;
-        private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.ToolStripMenuItem btnCategory;
         private System.Windows.Forms.ToolStripMenuItem btnProducer;
         private System.Windows.Forms.ToolStripMenuItem btnOrigin;
-        private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.TextBox txtCreateDate;
-        private System.Windows.Forms.Label lbCreateDate;
-        private System.Windows.Forms.TextBox txtPosition;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label lbUsername;
-        private System.Windows.Forms.Label lbPosition;
+        private System.Windows.Forms.ToolStripButton btnProducts;
+        private System.Windows.Forms.ToolStripButton btnLogin;
+        private System.Windows.Forms.ToolStripButton btnLogout;
+        private System.Windows.Forms.ToolStripButton btnBill;
+        private System.Windows.Forms.ToolStripButton btnRevenue;
+        private System.Windows.Forms.ToolStripButton btnAccounts;
+        private System.Windows.Forms.ToolStripButton btnCustomer;
+        private System.Windows.Forms.ToolStripButton btnExit;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton btnTutorial;
+        private System.Windows.Forms.ToolStripButton btnInformation;
     }
 }

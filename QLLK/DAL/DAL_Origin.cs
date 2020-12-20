@@ -22,5 +22,9 @@ namespace QLLK.DAL
         {
             connect.Query("UPDATE origin SET name = ? WHERE id = ?").Value(value).Execute();
         }
+        public void Detele(string[] value)
+        {
+            connect.Query("DELETE FROM origin WHERE id = ?").Value(value).Execute();
+        }
     }
 }

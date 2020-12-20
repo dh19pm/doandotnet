@@ -16,11 +16,15 @@ namespace QLLK.DAL
         }
         public void Insert(string[] value)
         {
-            connect.Query("INSERT INTO account(postion, username, password, create_date) VALUES(?, ?, ?)").Value(value).Execute();
+            connect.Query("INSERT INTO account(position, fullname, username, password, create_date) VALUES(?, ?, ?, ?, ?)").Value(value).Execute();
         }
         public void Update(string[] value)
         {
-            connect.Query("UPDATE account SET postion = ?, username = ?, password = ?, create_date = ? WHERE id = ?").Value(value).Execute();
+            connect.Query("UPDATE account SET position = ?, fullname = ?, username = ?, password = ? WHERE id = ?").Value(value).Execute();
+        }
+        public void Delete(string[] value)
+        {
+            connect.Query("DELETE FROM account WHERE id = ?").Value(value).Execute();
         }
         public DataRow getLogin(string[] value)
         {
