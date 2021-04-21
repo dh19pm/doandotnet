@@ -1,0 +1,8 @@
+- Tạo Database tên QLLK trong SQL Server
+- Chọn New Query rồi chạy file query.sql để tạo các table
+- Tiếp theo sửa file Connect.cs trong thư mục DAL của Project như sau:
+
+private string user = "sa"; // tài khoản sql server
+private string pass = "1803"; // mật khẩu sql server
+private string db = "QLLK"; // tên cở sở dữ liệu
+private string instance = "SIBEN\\SIBEN"; // tên đường dẫn instance

@@ -30,14 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_Account));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPosotion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCreateday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -65,6 +60,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPosotion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCreateday = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
@@ -97,7 +98,7 @@
             this.colId,
             this.colFullname,
             this.colName,
-            this.colPass,
+            this.colPassword,
             this.colPosotion,
             this.colCreateday});
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -109,55 +110,6 @@
             this.dataGridView.Size = new System.Drawing.Size(907, 393);
             this.dataGridView.TabIndex = 5;
             this.dataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView_CellFormatting);
-            // 
-            // colId
-            // 
-            this.colId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colId.DataPropertyName = "id";
-            this.colId.FillWeight = 50.89059F;
-            this.colId.HeaderText = "ID";
-            this.colId.Name = "colId";
-            this.colId.ReadOnly = true;
-            this.colId.Width = 30;
-            // 
-            // colFullname
-            // 
-            this.colFullname.DataPropertyName = "fullname";
-            this.colFullname.HeaderText = "Họ tên";
-            this.colFullname.Name = "colFullname";
-            this.colFullname.ReadOnly = true;
-            // 
-            // colName
-            // 
-            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colName.DataPropertyName = "username";
-            this.colName.FillWeight = 80.3119F;
-            this.colName.HeaderText = "Username";
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            // 
-            // colPass
-            // 
-            this.colPass.DataPropertyName = "password";
-            this.colPass.HeaderText = "Password";
-            this.colPass.Name = "colPass";
-            this.colPass.ReadOnly = true;
-            // 
-            // colPosotion
-            // 
-            this.colPosotion.DataPropertyName = "position";
-            this.colPosotion.FillWeight = 88.75362F;
-            this.colPosotion.HeaderText = "Chức vụ";
-            this.colPosotion.Name = "colPosotion";
-            this.colPosotion.ReadOnly = true;
-            // 
-            // colCreateday
-            // 
-            this.colCreateday.DataPropertyName = "create_date";
-            this.colCreateday.FillWeight = 77.96539F;
-            this.colCreateday.HeaderText = "Ngày tạo";
-            this.colCreateday.Name = "colCreateday";
-            this.colCreateday.ReadOnly = true;
             // 
             // bindingNavigator
             // 
@@ -422,6 +374,57 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Chức vụ:";
             // 
+            // colId
+            // 
+            this.colId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colId.DataPropertyName = "id";
+            this.colId.FillWeight = 50.89059F;
+            this.colId.HeaderText = "ID";
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            this.colId.Width = 30;
+            // 
+            // colFullname
+            // 
+            this.colFullname.DataPropertyName = "fullname";
+            this.colFullname.HeaderText = "Họ tên";
+            this.colFullname.Name = "colFullname";
+            this.colFullname.ReadOnly = true;
+            // 
+            // colName
+            // 
+            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colName.DataPropertyName = "username";
+            this.colName.FillWeight = 80.3119F;
+            this.colName.HeaderText = "Username";
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            // 
+            // colPassword
+            // 
+            this.colPassword.DataPropertyName = "password";
+            this.colPassword.HeaderText = "Password";
+            this.colPassword.Name = "colPassword";
+            this.colPassword.ReadOnly = true;
+            // 
+            // colPosotion
+            // 
+            this.colPosotion.DataPropertyName = "position";
+            this.colPosotion.FillWeight = 88.75362F;
+            this.colPosotion.HeaderText = "Chức vụ";
+            this.colPosotion.Name = "colPosotion";
+            this.colPosotion.ReadOnly = true;
+            // 
+            // colCreateday
+            // 
+            this.colCreateday.DataPropertyName = "create_date";
+            dataGridViewCellStyle1.NullValue = null;
+            this.colCreateday.DefaultCellStyle = dataGridViewCellStyle1;
+            this.colCreateday.FillWeight = 77.96539F;
+            this.colCreateday.HeaderText = "Ngày tạo";
+            this.colCreateday.Name = "colCreateday";
+            this.colCreateday.ReadOnly = true;
+            // 
             // GUI_Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -479,7 +482,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFullname;
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPassword;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPosotion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCreateday;
     }

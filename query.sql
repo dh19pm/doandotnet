@@ -90,16 +90,3 @@ CREATE TABLE bill_product
     FOREIGN KEY (bill_id) REFERENCES bill(id) ON DELETE CASCADE,
 	FOREIGN KEY (product_id) REFERENCES product(id)
 );
-
-DROP TABLE bill_product;
-DROP TABLE bill;
-DROP TABLE product;
-DROP TABLE origin;
-DROP TABLE category;
-DROP TABLE producer;
-DROP TABLE import;
-DROP TABLE account;
-DROP TABLE customer;
-
-
-SELECT b.*, a.fullname account, c.fullname customer FROM (bill b INNER JOIN account a ON b.account_id = a.id) INNER JOIN customer c ON b.customer_id = c.id;

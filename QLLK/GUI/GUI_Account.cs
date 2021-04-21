@@ -140,6 +140,13 @@ namespace QLLK.GUI
             {
                 e.Value = e.Value.ToString() == "1" ? "Quản lý" : "Nhân viên";
             }
+            if(dataGridView.Columns[e.ColumnIndex].Name == "colPassword")
+            {
+                string text = "";
+                for (int i = 0; i < e.Value.ToString().Length; i++)
+                    text += "•";
+                e.Value = text;
+            }
         }
     }
 }

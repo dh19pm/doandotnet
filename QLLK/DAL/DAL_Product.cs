@@ -30,6 +30,13 @@ namespace QLLK.DAL
         {
             connect.Query("DELETE FROM product WHERE id = ?").Value(value).Execute();
         }
+        public DataRow getID(string[] value)
+        {
+           DataRow data = connect.Query("SELECT * FROM product WHERE name = ? AND category_id = ? AND producer_id = ? AND origin_id = ? AND price = ?").Value(value).Fetch();
+            if (data != null)
+                return data;
+            return null;
+        }
         public int getCost(string[] value)
         {
             DataRow data = connect.Query("SELECT price FROM product WHERE id = ?").Value(value).Fetch();

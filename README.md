@@ -1,2 +1,0 @@
-# doandotnet
-Đồ án .NET

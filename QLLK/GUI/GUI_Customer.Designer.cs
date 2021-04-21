@@ -51,7 +51,6 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.btnRefresh = new System.Windows.Forms.ToolStripButton();
-            this.btnBill = new System.Windows.Forms.ToolStripButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -157,8 +156,7 @@
             this.btnDrop,
             this.toolStripSeparator1,
             this.btnSave,
-            this.btnRefresh,
-            this.btnBill});
+            this.btnRefresh});
             this.bindingNavigator.Location = new System.Drawing.Point(3, 16);
             this.bindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -205,7 +203,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -283,15 +280,6 @@
             this.btnRefresh.Size = new System.Drawing.Size(23, 20);
             this.btnRefresh.Text = "Làm Mới";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnBill
-            // 
-            this.btnBill.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnBill.Image = ((System.Drawing.Image)(resources.GetObject("btnBill.Image")));
-            this.btnBill.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnBill.Name = "btnBill";
-            this.btnBill.Size = new System.Drawing.Size(23, 20);
-            this.btnBill.Text = "Lập Hóa Đơn";
             // 
             // groupBox3
             // 
@@ -424,7 +412,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton btnDrop;
         private System.Windows.Forms.ToolStripButton btnRefresh;
-        private System.Windows.Forms.ToolStripButton btnBill;
         private System.Windows.Forms.DataGridViewTextBoxColumn colId;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFullname;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPhonenumber;

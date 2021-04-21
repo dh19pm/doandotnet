@@ -96,28 +96,49 @@ namespace QLLK.BUS
         }
         public void addItem(DTO_Product info)
         {
-            string timeNow = DateTime.Now.ToString("yyyy-MM-dd");
-            string[] val =
+            string[] valss =
             {
-                timeNow
-            };
-            DataRow getImport = dataImport.getDate(val);
-            if (getImport == null)
-                info.Import.Id = dataImport.InsertID(val);
-            else
-                info.Import.Id = Convert.ToInt32(getImport["id"]);
-            string[] value = {
-                info.Account.Id.ToString(),
+                info.Name,
                 info.Category.Id.ToString(),
                 info.Producer.Id.ToString(),
-                info.Import.Id.ToString(),
                 info.Origin.Id.ToString(),
-                info.Name,
-                info.Amount.ToString(),
-                info.Price.ToString(),
-                info.WarrantyPeriod.ToString()
+                info.Price.ToString()
             };
-            dataProduct.Insert(value);
+            DataRow product = dataProduct.getID(valss);
+            if (product == null)
+            {
+                string timeNow = DateTime.Now.ToString("yyyy-MM-dd");
+                string[] val =
+                {
+                    timeNow
+                };
+                DataRow getImport = dataImport.getDate(val);
+                if (getImport == null)
+                    info.Import.Id = dataImport.InsertID(val);
+                else
+                    info.Import.Id = Convert.ToInt32(getImport["id"]);
+                string[] value = {
+                    info.Account.Id.ToString(),
+                    info.Category.Id.ToString(),
+                    info.Producer.Id.ToString(),
+                    info.Import.Id.ToString(),
+                    info.Origin.Id.ToString(),
+                    info.Name,
+                    info.Amount.ToString(),
+                    info.Price.ToString(),
+                    info.WarrantyPeriod.ToString()
+                };
+                dataProduct.Insert(value);
+            }
+            else
+            {
+                int soluong = Convert.ToInt32(product["amount"]) + info.Amount;
+                string[] value = {
+                    soluong.ToString(),
+                    product["id"].ToString()
+                };
+                dataProduct.UpdateAmount(value);
+            }
         }
         public void editItem(int id, DTO_Product info)
         {

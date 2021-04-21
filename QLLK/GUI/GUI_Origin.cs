@@ -65,6 +65,7 @@ namespace QLLK.GUI
             if (txtName.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập xuất sứ !", "Thông báo");
+                return;
             }
             DTO_Origin info = new DTO_Origin();
             info.Name = txtName.Text;

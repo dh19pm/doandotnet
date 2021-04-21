@@ -40,7 +40,7 @@
             // dtpBegin
             // 
             this.dtpBegin.Location = new System.Drawing.Point(109, 28);
-            this.dtpBegin.MaxDate = new System.DateTime(2020, 12, 20, 0, 0, 0, 0);
+            this.dtpBegin.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
             this.dtpBegin.Name = "dtpBegin";
             this.dtpBegin.Size = new System.Drawing.Size(163, 20);
             this.dtpBegin.TabIndex = 0;
@@ -49,11 +49,11 @@
             // dtpEnd
             // 
             this.dtpEnd.Location = new System.Drawing.Point(110, 66);
-            this.dtpEnd.MaxDate = new System.DateTime(2020, 12, 20, 0, 0, 0, 0);
+            this.dtpEnd.MaxDate = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
             this.dtpEnd.Name = "dtpEnd";
             this.dtpEnd.Size = new System.Drawing.Size(163, 20);
             this.dtpEnd.TabIndex = 1;
-            this.dtpEnd.Value = new System.DateTime(2020, 12, 20, 0, 0, 0, 0);
+            this.dtpEnd.Value = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
             // 
             // label1
             // 

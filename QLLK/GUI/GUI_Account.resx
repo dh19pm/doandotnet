@@ -123,15 +123,6 @@
   <metadata name="dataGridView.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="bindingNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="bindingNavigator.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridView.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="colId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -141,25 +132,7 @@
   <metadata name="colName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="colPass.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colPosotion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colCreateday.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colFullname.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colPass.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="colPassword.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="colPosotion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -252,7 +225,7 @@
   <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM8SURBVDhPbdF9bJNVFMfxSxhubdaCcZEsMEqEICHyB74E
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM8SURBVDhPbdF9bJNVFMfxSxhubdaCcZEsMEqEIMHwB74E
         YxZ1AxaJJiTGxQkMyCZujQupEkVxBqPTuvkSFIhuMJAV3DTQdm+mwNqundtatrYb2yToBm60dWXdZpEl
         tV38etuQ0Bhv8kme5ybnd869V6RXeD4RLznjH51xcfXqCANDvyT1+wZxXe6nq7uXSzYHVquV9442I4oc
         8xlbG74WQiyR0sSiF1piYu0Rvqi3kVg3/QG8vgF8A4N4vD76+j1cGRomMh3ic8MFsrbVoH7EPC+Ln0yG
@@ -266,7 +239,7 @@
         1/WNbK80opDHqKjrIXDjGtFoVJZHySk1sF4/gtYUQFmQcoS0bZYfl5baeFi+r05/klf0F1DpvBw0jcrC
         f4jFYtyauMZq3XmeODrGW7YwyvxTcVm8OxkgMjOz0jceM4qnTv+ZW/jhnMFgiBoMlqijpzfqcrmiRqMx
         1tRQy4I1b84t3HDktiK3NrJAs7tVFhdKyySxSFouPS0lNndIO6XiFLvuSuxvl16UHpcWS8mVCLlfSiSu
-        uEvzPxL7OVK2pBZCpP0L+gso0g5fI4UAAAAASUVORK5CYII=
+        uEvzPxL7OVK2pBZCpP0L9nIo0RZ1vqsAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnRefresh.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

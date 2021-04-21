@@ -82,7 +82,6 @@ namespace QLLK.GUI
 
             if (this.action == "add") 
                 bus.addItem(info);
-                //MessageBox.Show("text");
 
             if (this.action == "edit")
             {
