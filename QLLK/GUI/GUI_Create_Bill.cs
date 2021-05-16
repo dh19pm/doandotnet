@@ -16,9 +16,11 @@ namespace QLLK.GUI
     {
         string[] bill;
         BUS_Create_Bill bus = new BUS_Create_Bill();
-        public GUI_Create_Bill(string[] temp)
+        DataRow Account;
+        public GUI_Create_Bill(string[] temp, DataRow Account)
         {
             this.bill = temp;
+            this.Account = Account;
             InitializeComponent();
         }
 
@@ -38,7 +40,7 @@ namespace QLLK.GUI
             info.Fullname = txtFullname.Text;
             info.PhoneNumber = txtPhoneNumber.Text;
             info.Address = txtAddress.Text;
-            bus.addItem(info, this.bill, Convert.ToInt32(txtTotalCost.Text));
+            bus.addItem(info, this.bill, Convert.ToInt32(txtTotalCost.Text), Convert.ToInt32(Account["id"]));
             MessageBox.Show("Đã lập hóa đơn", "Thông báo");
             this.Close();
         }

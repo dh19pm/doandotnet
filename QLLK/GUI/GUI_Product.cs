@@ -18,8 +18,11 @@ namespace QLLK.GUI
         string action;
         int index;
         List<string> bill = new List<string>();
-        public GUI_Product()
+        DataRow Account;
+
+        public GUI_Product(DataRow Account)
         {
+            this.Account = Account;
             InitializeComponent();
         }
 
@@ -82,7 +85,7 @@ namespace QLLK.GUI
             }
 
             DTO_Product info = new DTO_Product();
-            info.Account.Id = 1;
+            info.Account.Id = Convert.ToInt32(Account["id"]);
             info.Category.Id = Convert.ToInt32(cboCategory.SelectedValue);
             info.Producer.Id = Convert.ToInt32(cboProducer.SelectedValue);
             info.Origin.Id = Convert.ToInt32(cboOrigin.SelectedValue);
@@ -156,7 +159,7 @@ namespace QLLK.GUI
                 MessageBox.Show("Vui lòng chọn sản phẩm cần mua để lập hóa đơn!");
                 return;
             }
-            GUI_Create_Bill form = new GUI_Create_Bill(temp);
+            GUI_Create_Bill form = new GUI_Create_Bill(temp, Account);
             form.ShowDialog();
             GUI_Product_Load(sender, e);
         }

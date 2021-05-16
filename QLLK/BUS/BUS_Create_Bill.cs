@@ -43,7 +43,7 @@ namespace QLLK.BUS
             };
             dataProduct.UpdateAmount(values);
         }
-        public void addItem(DTO_Customer info, string[] bill, int totalCost)
+        public void addItem(DTO_Customer info, string[] bill, int totalCost, int account_id)
         {
             string[] valueCustomers = {
                 info.Fullname,
@@ -69,7 +69,7 @@ namespace QLLK.BUS
             string timeNow = DateTime.Now.ToString("yyyy-MM-dd");
             string[] valueBill =
             {
-                "1",
+                account_id.ToString(),
                 idCustomer.ToString(),
                 amount.ToString(),
                 totalCost.ToString(),

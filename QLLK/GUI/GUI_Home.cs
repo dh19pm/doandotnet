@@ -12,8 +12,7 @@ namespace QLLK.GUI
 {
     public partial class GUI_Home : Form
     {
-        DataRow account;
-        private int position;
+        DataRow Account;
         GUI_Account frmAccount = null;
         GUI_Category frmCategory = null;
         GUI_Producer frmProducer = null;
@@ -22,9 +21,6 @@ namespace QLLK.GUI
         GUI_Bill frmBill = null;
         GUI_Customer frmCustomer = null;
         GUI_Revenue frmRevenue = null;
-
-        public DataRow Account { get => account; set => account = value; }
-        public int Position { get => position; set => position = value; }
 
         public GUI_Home()
         {
@@ -44,7 +40,7 @@ namespace QLLK.GUI
         {
             if (Account != null)
             {
-                if (Position == 0)
+                if (Convert.ToInt32(Account["position"]) == 0)
                 {
                     menuStrip.Enabled = false;
                     btnAccounts.Enabled = false;
@@ -52,7 +48,7 @@ namespace QLLK.GUI
                     btnCustomer.Enabled = false;
                 }
 
-                if (Position == 1)
+                if (Convert.ToInt32(Account["position"]) == 1)
                 {
                     menuStrip.Enabled = true;
                 }
@@ -137,7 +133,6 @@ namespace QLLK.GUI
             Account = login.Account;
             if (Account != null)
             {
-                Position = Convert.ToInt32(Account["position"]);
                 resetBtn(true);
                 checkLogin();
             }
@@ -147,7 +142,7 @@ namespace QLLK.GUI
         {
             if (frmProduct == null || frmProduct.IsDisposed)
             {
-                frmProduct = new GUI_Product();
+                frmProduct = new GUI_Product(Account);
                 frmProduct.MdiParent = this;
                 frmProduct.Dock = DockStyle.Fill;
                 frmProduct.FormBorderStyle = FormBorderStyle.None;
